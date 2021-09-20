@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+
+    <form action="/add" method="POST" >
+    <fieldset>
+    
+    <!-- Form Name -->
+    <legend><h2><b>Agendamiento</b></h2></legend><br>
+    
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label">Id Usuario</label>  
+      <div class="col-md-4 inputGroupContainer">
+      <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input  name="idOwner" placeholder="Id Usuario" class="form-control"  type="text">
+        </div>
+      </div>
+    </div>
+    
+    <!-- Text input-->
+    
+    <div class="form-group">
+      <label class="col-md-4 control-label" >Id Mascosta</label> 
+        <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input name="idPet" placeholder="Id Mascota" class="form-control"  type="text">
+        </div>
+      </div>
+    </div>
+    
+      <div class="form-group"> 
+      <label class="col-md-4 control-label">Servicio</label>
+        <div class="col-md-4 selectContainer">
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+        <select name="serviceName" class="form-control selectpicker">
+          <option value="">Selecione el servicio deseado</option>
+          <option>Guraderia</option>
+          <option>Dia de sol</option>
+          <option >Colegio</option>
+        </select>
+      </div>
+    </div>
+    </div>
+      
+    <!-- Text input-->
+    
+    <div class="form-group">
+      <label class="col-md-4 control-label">Fecha Inicio</label>  
+      <div class="col-md-4 inputGroupContainer">
+      <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input  name="startDate" placeholder="Fecha inicio" class="form-control"  type="text">
+        </div>
+      </div>
+    </div>
+    
+    <!-- Text input-->
+    
+    <div class="form-group">
+      <label class="col-md-4 control-label" >Fecha Fin</label> 
+        <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input name="finishDate" placeholder="Fecha fin" class="form-control"  type="text">
+        </div>
+      </div>
+    </div>
+    
+    <!-- Text input-->
+    
+    <div class="form-group">
+      <label class="col-md-4 control-label" >Costo</label> 
+        <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input name="cost" placeholder="Costo" class="form-control"  type="text">
+        </div>
+      </div>
+    </div>
+    <!-- Select Basic -->
+    <!-- Button -->
+    <div class="form-group">
+      <label class="col-md-4 control-label"></label>
+      <div class="col-md-4"><br>
+       <button type="submit" class="btn btn-primary" >SUBMIT</button>
+      </div>
+    </div>
+    
+    </fieldset>
+    </form>
+    </div>
+</div><!-- /.container -->
+</body>
+</html>
