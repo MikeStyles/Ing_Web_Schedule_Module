@@ -17,7 +17,7 @@ app.use(express.urlencoded({extended: false}))
 app.use('/',indexRoutes);
 
 mongoose
-    .connect(process.env.MONGODBURI)
+    .connect("mongodb+srv://duvanc:H9lmTQIoXDmPOwiV@cluster0.p5egw.mongodb.net/agendamiento?retryWrites=true&w=majority")
     .then(()=>{
         app.listen(app.get('port'),()=>{
             console.log(`server on port ${app.get('port')}`)
