@@ -10,4 +10,13 @@ const AddScheduleRepository = async (data) =>{
     }
 }
 
-module.exports = {AddScheduleRepository};
+const deleteScheduleRepository = async (idOwner)=>{
+    try {
+        
+    } catch (error) {
+        console.log(error);
+        throw new Error();
+    }
+}
+
+module.exports = {AddScheduleRepository, deleteScheduleRepository};

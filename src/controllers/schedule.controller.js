@@ -9,4 +9,9 @@ const scheduleController = async (req,res)=>{
     }
 }
 
-module.exports= {scheduleController};
+const scheduleDeltation = async (req,res)=>{
+    const {idOwner} = req.params
+    
+}
+
+module.exports= {scheduleController, scheduleDeltation};

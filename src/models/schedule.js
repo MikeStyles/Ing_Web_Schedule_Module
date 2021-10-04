@@ -10,5 +10,7 @@ const ScheduleSchema = new Schema({
     cost: String
 });
 
+
+
 module.exports = mongoose.model('Schedule', ScheduleSchema);
 

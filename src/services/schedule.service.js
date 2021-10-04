@@ -5,4 +5,9 @@ const createSchedule = async (data)=>{
     return newSchedule;
 }
 
-module.exports = {createSchedule};
+
+const deleteSchedule = async (idOwner)=>{
+    
+} 
+
+module.exports = {createSchedule,deleteSchedule};
