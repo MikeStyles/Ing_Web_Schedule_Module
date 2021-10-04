@@ -19,7 +19,7 @@ app.use('/',indexRoutes);
     console.log("server on port 3000")
 })*/
 mongoose
-    .connect("mongodb+srv://duvanc:H9lmTQIoXDmPOwiV@cluster0.p5egw.mongodb.net/agendamiento?retryWrites=true&w=majority")
+    .connect(ENV)
     .then(()=>{
         app.listen(app.get('port'),()=>{
             console.log(`server on port ${app.get('port')}`)
