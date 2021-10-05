@@ -10,9 +10,9 @@ const AddScheduleRepository = async (data) =>{
     }
 }
 
-const deleteScheduleRepository = async (idOwner)=>{
+const deleteScheduleRepository = async idOwner=>{
     try {
-        
+        return await Schedule.findByIdAndDelete(idOwner);
     } catch (error) {
         console.log(error);
         throw new Error();

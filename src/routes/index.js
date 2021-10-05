@@ -9,8 +9,9 @@ router.get('/',(req,res)=>{
 
 router.post('/add', scheduleController.scheduleController)
 
-router.get('/delete/:id',)
+router.delete('/delete/:idOwner',scheduleController.scheduleDeltation)
 
 module.exports=router;
+
 
 

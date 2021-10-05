@@ -10,8 +10,15 @@ const scheduleController = async (req,res)=>{
 }
 
 const scheduleDeltation = async (req,res)=>{
-    const {idOwner} = req.params
+    try {
+        const {idOwner} = req.params;
+        const deletation = await schedule.deleteSchedule(idOwner)
+        return res.status(200).json(deletation);
+    } catch (error) {
+        return res.status(500).json({message:"Lo sentimos ha ocuerrido un problema al eliminar la reserva"});
+    }
     
+
 }
 
 module.exports= {scheduleController, scheduleDeltation};

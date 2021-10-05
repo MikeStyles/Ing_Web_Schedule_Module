@@ -6,8 +6,9 @@ const createSchedule = async (data)=>{
 }
 
 
-const deleteSchedule = async (idOwner)=>{
-    
+const deleteSchedule = async idOwner=>{
+    const newSchedule = await scheduleRepository.deleteScheduleRepository(idOwner);
+    return newSchedule
 } 
 
 module.exports = {createSchedule,deleteSchedule};
