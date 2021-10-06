@@ -6,21 +6,17 @@ const mongoose = require('mongoose');
 
 const app = express();
 
-const indexRoutes = require('./routes/index');
-const { env } = require('process');
+const indexRoutes = require('./routes/schedule.routes');
 app.set('port', process.env.PORT || 4000);
-//app.set('views', path.join(__dirname, 'views'));
-//app.set('view engine','ejs');
+
 
 app.use(morgan('dev'));
 app.use(express.urlencoded({extended: false}))
 app.use(express.json());
 app.use('/',indexRoutes);
-/*app.listen(app.get('port'),()=>{
-    console.log("server on port 3000")
-})*/
+
 mongoose
-    .connect(env)
+    .connect("mongodb://duvanc:H9lmTQIoXDmPOwiV@cluster0-shard-00-00.p5egw.mongodb.net:27017,cluster0-shard-00-01.p5egw.mongodb.net:27017,cluster0-shard-00-02.p5egw.mongodb.net:27017/agendamiento?ssl=true&replicaSet=atlas-14dpig-shard-0&authSource=admin&retryWrites=true&w=majority")
     .then(()=>{
         app.listen(app.get('port'),()=>{
             console.log(`server on port ${app.get('port')}`)
