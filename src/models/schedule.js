@@ -3,12 +3,16 @@ const Schema = mongoose.Schema;
 
 const ScheduleSchema = new Schema(
     {
-    idOwner: String,
     idPet: String,
     serviceName: String,
-    startDate: String,
-    finishDate: String,
-    cost: String
+    startDate: Date,
+    finishDate: Date,
+    cost: String,
+    status:{
+        type: String,
+        default: "Activo"
+    },
+    news: String
     }
 );
 
