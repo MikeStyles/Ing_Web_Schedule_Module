@@ -12,7 +12,10 @@ const ScheduleSchema = new Schema(
         type: String,
         default: "Activo"
     },
-    news: String
+    news: {
+        type: String,
+        default:""
+    }
     }
 );
 

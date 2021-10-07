@@ -11,6 +11,7 @@ const verifyToken = async (req, res, next) => {
     req.userdata = data;
     next();
   } catch (error) {
+    console.log(error)
     return res.status(401).json({ message: 'Unauthorized' });
   }
 };
